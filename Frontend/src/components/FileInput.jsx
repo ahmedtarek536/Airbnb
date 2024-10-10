@@ -51,7 +51,7 @@ export default function FileInput({ onImages }) {
                 const downloadURL = await getDownloadURL(
                   uploadTask.snapshot.ref
                 );
-                imageUrls.push(downloadURL);
+                imageUrls.unshift(downloadURL);
                 resolve();
               } catch (err) {
                 reject(err);
