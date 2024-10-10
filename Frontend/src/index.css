@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply rounded-lg border border-stone-200 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-500 focus:outline-none focus:ring focus:ring-stone-700 md:px-6 md:py-3;
+  }
+  .button {
+    @apply rounded-lg text-sm transition-all duration-300 px-6 py-3 w-full bg-primary font-semibold text-white outline-none;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.grid-template-250 {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.grid-template-200 {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+/*scrool image slider */
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px; /* Adjust icon size */
+}
+
+/* text editor*/
+.quill {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ql-editor h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.ql-editor h2 {
+  font-size: 1.75em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.ql-editor h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.ql-editor h4 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.ql-editor h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.ql-editor h6 {
+  font-size: 0.875em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
