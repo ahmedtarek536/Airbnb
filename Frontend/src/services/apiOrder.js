@@ -1,4 +1,4 @@
-const apiUrl = "https://airbnb-backend-eta.vercel.app";
+const apiUrl = "https://airbnb-backend-rho.vercel.app";
 
 
 async function AddOrder(data) {
