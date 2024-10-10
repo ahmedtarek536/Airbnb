@@ -1,5 +1,5 @@
+const apiUrl = "https://airbnb-backend-eta.vercel.app";
 
-const apiUrl = "https://airbnb-rho-teal.vercel.app";
 
 async function login(data) {
   const response = await fetch(`${apiUrl}/api/users/login`, {
