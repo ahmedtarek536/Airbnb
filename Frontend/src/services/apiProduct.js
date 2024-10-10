@@ -1,4 +1,4 @@
-const apiUrl = "https://airbnb-backend-xi-rouge.vercel.app;
+const apiUrl = "https://airbnb-rho-teal.vercel.app";
 
 async function AddProduct(data) {
   const token = localStorage.getItem("token");
