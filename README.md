@@ -1,10 +1,6 @@
-Here’s a well-rounded project description for your Airbnb Clone to upload on GitHub:
-
----
-
 # Airbnb Clone
 
-This project is a full-stack Airbnb clone, replicating core features of the popular vacation rental platform. It provides a comprehensive booking system where users can browse, search, and reserve properties, and hosts can list their own spaces. Built using modern web technologies, the project demonstrates the implementation of key functionalities like user authentication, property management, and payment integration.
+This project is a full-stack Airbnb clone, replicating core features of the popular vacation rental platform. It provides a comprehensive booking system where users can browse, search, and reserve properties, and hosts can list their own spaces. Built using modern web technologies, the project demonstrates the implementation of key functionalities like user authentication, property management, and reviws system.
 
 ## Features
 
@@ -15,17 +11,16 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 - **Search Functionality**: Integrated search feature with dynamic filtering options for properties based on price, location, and amenities.
 - **Reviews & Ratings**: Users can leave reviews and ratings on properties they have booked.
 - **Responsive Design**: Fully responsive UI ensuring seamless use on both desktop and mobile devices.
-- **Payment Integration**: Includes a payment gateway for processing bookings securely.
+
 
 ## Tech Stack
 
-- **Frontend**: React.js, Tailwind CSS
+- **Frontend**: React.js, Tailwind CSS, MUI
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB with Mongoose ODM
 - **Authentication**: JWT (JSON Web Tokens)
-- **File Uploads**: Cloud storage for images (e.g., Firebase or AWS S3)
-- **Payments**: Integrated with Stripe API
-- **Deployment**: Vercel (Frontend) and Heroku (Backend)
+- **File Uploads**: Cloud storage for images (Firebase )
+- **Deployment**: Vercel (Frontend) and (Backend)
 
 ## Installation
 
@@ -45,17 +40,9 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
    npm install
    ```
 
-3. Create a `.env` file in the server folder with the following keys:
+3. Start the development servers:
 
-   ```
-   MONGODB_URI=<your-mongo-db-uri>
-   JWT_SECRET=<your-jwt-secret>
-   STRIPE_SECRET_KEY=<your-stripe-secret-key>
-   ```
-
-4. Start the development servers:
-
-   - Frontend: `npm start` (in the `client` directory)
+   - Frontend: `npm run dev` (in the `client` directory)
    - Backend: `npm start` (in the `server` directory)
 
 ## Screenshots
