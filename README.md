@@ -5,7 +5,7 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 ## Features
 
 - **User Authentication**: Secure login and registration using JWT (JSON Web Tokens).
-- **Property Listings**: Users can browse available properties, view details, and filter results by location, price, and amenities.
+- **Property Listings**: Users can browse available properties, view details, and filter results by title, category, and location.
 - **Booking System**: Users can book properties with date selection and view their booking history.
 - **Host Dashboard**: Hosts can add, edit, and manage their listings, including uploading property images and setting availability.
 - **Search Functionality**: Integrated search feature with dynamic filtering options for properties based on price, location, and amenities.
