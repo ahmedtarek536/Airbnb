@@ -10,10 +10,11 @@ import ReserveCard from "../features/Products/ReserveCard";
 import { useQuery } from "@tanstack/react-query";
 import { getProdutcById } from "../services/apiProduct";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 
 function ProductPage() {
   const { productID } = useParams();
-  const { data } = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ["product"],
     queryFn: () => getProdutcById(productID),
   });
@@ -22,41 +23,45 @@ function ProductPage() {
   return (
     <Box>
       <Header />
-      <Container>
-        <Box className="flex justify-between items-center gap-4 mt-8 mb-4">
-          <h2 className="text-lg sm:text-2xl font-semibold  ">
-            {product?.title}
-          </h2>
-          <Box className="flex gap-2 sm:gap-5 text-sm font-medium font-mono">
-            <p className="cursor-pointer flex items-center ">
-              <IosShare sx={{ fontSize: "17px" }} />{" "}
-              <span className="underline">Share</span>
-            </p>
-            <p className="cursor-pointer flex items-center ">
-              <FavoriteBorder sx={{ fontSize: "18px" }} />{" "}
-              <span className="underline">Save</span>
-            </p>
-          </Box>
-        </Box>
-        <Box className="overflow-hiddegn">
-          <ImageSlider
-            images={product?.images}
-            style={"h-[300px] sm:h-[500px]"}
-          />
-        </Box>
-        <Box className="flex gap-6 mt-8">
-          <Box className=" w-full">
-            <Box className="lg:flex gap-40 items-start  justify-between">
-              <ProductDetails product={product} />
-              <Box className="hidden lg:block">
-                <ReserveCard product={product} />
-              </Box>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Container>
+          <Box className="flex justify-between items-center gap-4 mt-8 mb-4">
+            <h2 className="text-lg sm:text-2xl font-semibold  ">
+              {product?.title}
+            </h2>
+            <Box className="flex gap-2 sm:gap-5 text-sm font-medium font-mono">
+              <p className="cursor-pointer flex items-center ">
+                <IosShare sx={{ fontSize: "17px" }} />{" "}
+                <span className="underline">Share</span>
+              </p>
+              <p className="cursor-pointer flex items-center ">
+                <FavoriteBorder sx={{ fontSize: "18px" }} />{" "}
+                <span className="underline">Save</span>
+              </p>
             </Box>
-            <HostDetails product={product} />
           </Box>
-        </Box>
-        <ReviewsDetails product={product} />
-      </Container>
+          <Box className="overflow-hiddegn">
+            <ImageSlider
+              images={product?.images}
+              style={"h-[300px] sm:h-[500px]"}
+            />
+          </Box>
+          <Box className="flex gap-6 mt-8">
+            <Box className=" w-full">
+              <Box className="lg:flex gap-40 items-start  justify-between">
+                <ProductDetails product={product} />
+                <Box className="hidden lg:block">
+                  <ReserveCard product={product} />
+                </Box>
+              </Box>
+              <HostDetails product={product} />
+            </Box>
+          </Box>
+          <ReviewsDetails product={product} />
+        </Container>
+      )}
       <Footer />
     </Box>
   );

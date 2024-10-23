@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
 import { getUserInfo, UpdateUserInfo } from "../../services/apiUser";
 import toast from "react-hot-toast";
+import Loader from "../../components/Loader";
 
 const AccountInfo = () => {
   const { data, error, isLoading } = useQuery({
@@ -46,7 +47,7 @@ const AccountInfo = () => {
     mutate({ [field]: value });
   };
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader />;
   if (error) return <div>Error loading data</div>;
 
   return (

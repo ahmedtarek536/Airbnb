@@ -1,6 +1,5 @@
+// const apiUrl = "http://localhost:5000";
 const apiUrl = "https://airbnb-backend-4nvo.vercel.app";
-
-
 
 async function AddReview(data) {
   const token = localStorage.getItem("token");

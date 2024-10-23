@@ -3,9 +3,10 @@ import { useQuery } from "@tanstack/react-query";
 import { getUserProdutsById } from "../../services/apiProduct";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Loader from "../../components/Loader";
 
 function ProfileProducts({ userId }) {
-  const { data, refetch } = useQuery({
+  const { isLoading, data, refetch } = useQuery({
     queryFn: () => getUserProdutsById(userId),
     queryKey: ["product", "user", "profile"],
   });
@@ -18,6 +19,7 @@ function ProfileProducts({ userId }) {
   );
 
   const products = data?.data;
+  if (isLoading) return <Loader />;
   return (
     <Box className="grid grid-template-200 gap-4 mt-6">
       {products?.map((product) => (

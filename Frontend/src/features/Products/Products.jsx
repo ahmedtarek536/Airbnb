@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
 import { getProducts } from "../../services/apiProduct";
 import { useEffect } from "react";
+import Loader from "../../components/Loader";
 
 function Products() {
   const query = useSelector((state) => state.main.query);
@@ -21,7 +22,7 @@ function Products() {
 
   const products = data?.data;
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader />;
   if (isError) return <div>Error loading products.</div>;
 
   return (

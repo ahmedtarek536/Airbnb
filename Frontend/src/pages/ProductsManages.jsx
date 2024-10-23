@@ -1,19 +1,20 @@
 import { Box, Container } from "@mui/material";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
 import { getUserProduts } from "../services/apiProduct";
 import UserProductCard from "../features/Products/UserProductCard";
 import EmptyItem from "../components/EmptyItem";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 
 function ProductsManages() {
   const navigate = useNavigate();
-  const { data } = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ["product"],
     queryFn: getUserProduts,
   });
+
   return (
     <Box>
       <Header />
@@ -33,17 +34,21 @@ function ProductsManages() {
             </button>
           </Box>
         </Box>
-        <Box className="">
-          {data?.data?.length ? (
-            data?.data?.map((product) => (
-              <UserProductCard product={product} key={product?._id} />
-            ))
-          ) : (
-            <EmptyItem>
-              You don’t have any expresines , go and create new one.
-            </EmptyItem>
-          )}
-        </Box>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Box className="">
+            {data?.data?.length ? (
+              data?.data?.map((product) => (
+                <UserProductCard product={product} key={product?._id} />
+              ))
+            ) : (
+              <EmptyItem>
+                You don’t have any expresines , go and create new one.
+              </EmptyItem>
+            )}
+          </Box>
+        )}
       </Container>
       <Footer />
     </Box>

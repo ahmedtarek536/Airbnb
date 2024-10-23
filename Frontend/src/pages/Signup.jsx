@@ -6,6 +6,7 @@ import { signup } from "../services/apiUser";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { loginToken } from "../hooks/userReducer";
+import Loader from "../components/Loader";
 
 function Signup() {
   const { register, handleSubmit, reset } = useForm();
@@ -13,7 +14,7 @@ function Signup() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const { mutate } = useMutation({
+  const { isLoading, mutate } = useMutation({
     mutationFn: signup,
     onSuccess: (data) => {
       queryClient.invalidateQueries("user");
@@ -36,6 +37,7 @@ function Signup() {
     mutate(data);
     reset();
   }
+  // if (isLoading) return <Loader />;
 
   return (
     <>

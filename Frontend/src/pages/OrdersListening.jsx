@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 import OrderListening from "../features/Orders/OrderListening";
 import EmptyItem from "../components/EmptyItem";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 
 function OrdersListening() {
-  const { data } = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ["order"],
     queryFn: getHostOrder,
   });
@@ -23,6 +24,7 @@ function OrdersListening() {
     },
     [ordersStatus, data?.data]
   );
+
   return (
     <Box>
       <Header />
@@ -110,18 +112,21 @@ function OrdersListening() {
             Cancelled
           </button>
         </Box>
-
-        <Box>
-          {Orders?.length ? (
-            Orders?.map((order) => (
-              <OrderListening key={order._id} order={order} />
-            ))
-          ) : (
-            <EmptyItem>
-              You don’t have any orders today, check next section.
-            </EmptyItem>
-          )}
-        </Box>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Box>
+            {Orders?.length ? (
+              Orders?.map((order) => (
+                <OrderListening key={order._id} order={order} />
+              ))
+            ) : (
+              <EmptyItem>
+                You don’t have any orders today, check next section.
+              </EmptyItem>
+            )}
+          </Box>
+        )}
       </Container>
       <Footer />
     </Box>
