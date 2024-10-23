@@ -1,17 +1,16 @@
 # Airbnb Clone
 
-This project is a full-stack Airbnb clone, replicating core features of the popular vacation rental platform. It provides a comprehensive booking system where users can browse, search, and reserve properties, and hosts can list their own spaces. Built using modern web technologies, the project demonstrates the implementation of key functionalities like user authentication, property management, and reviws system.
+This project is a full-stack Airbnb clone, replicating core features of the popular vacation rental platform. It provides a comprehensive booking system where users can browse, search, and reserve properties, while hosts can list their own spaces. Built using modern web technologies, the project demonstrates the implementation of key functionalities like user authentication, property management, and a reviews system.
 
 ## Features
 
 - **User Authentication**: Secure login and registration using JWT (JSON Web Tokens).
-- **Property Listings**: Users can browse through available properties, view details, and filter results by location, price, and amenities.
+- **Property Listings**: Users can browse available properties, view details, and filter results by location, price, and amenities.
 - **Booking System**: Users can book properties with date selection and view their booking history.
 - **Host Dashboard**: Hosts can add, edit, and manage their listings, including uploading property images and setting availability.
 - **Search Functionality**: Integrated search feature with dynamic filtering options for properties based on price, location, and amenities.
 - **Reviews & Ratings**: Users can leave reviews and ratings on properties they have booked.
 - **Responsive Design**: Fully responsive UI ensuring seamless use on both desktop and mobile devices.
-
 
 ## Tech Stack
 
@@ -19,8 +18,8 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB with Mongoose ODM
 - **Authentication**: JWT (JSON Web Tokens)
-- **File Uploads**: Cloud storage for images (Firebase )
-- **Deployment**: Vercel (Frontend) and (Backend)
+- **File Uploads**: Cloud storage for images (Firebase)
+- **Deployment**: Vercel (Frontend) and Heroku (Backend)
 
 ## Installation
 
@@ -42,12 +41,15 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 
 3. Start the development servers:
 
-   - Frontend: `npm run dev` (in the `client` directory)
-   - Backend: `npm start` (in the `server` directory)
+   - **Frontend**: `npm run dev` (in the `client` directory)
+   - **Backend**: `npm start` (in the `server` directory)
 
 ## Screenshots
 
-_Include screenshots of the key features like property listings, search filters, and booking flow._
+_Include screenshots of key features such as property listings, search filters, and booking flow._
+
+## Live Demo
+-https://airbnb-opal-five.vercel.app/
 
 ## Future Improvements
 
@@ -56,7 +58,3 @@ _Include screenshots of the key features like property listings, search filters,
 - Introduce additional payment gateways for global support.
 - Allow users to save favorite properties.
 
----
-
-Feel free to adjust any sections or add more specific details related to your project.
-https://airbnb-opal-five.vercel.app
