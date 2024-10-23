@@ -26,7 +26,7 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/airbnb-clone.git
+   git clone https://github.com/ahmedtarek536/Airbnb.git
    ```
 
 2. Install dependencies for both client and server:
