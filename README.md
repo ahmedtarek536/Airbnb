@@ -32,10 +32,10 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 2. Install dependencies for both client and server:
 
    ```bash
-   cd client
+   cd Frontend
    npm install
 
-   cd ../server
+   cd ../Backend
    npm install
    ```
 
