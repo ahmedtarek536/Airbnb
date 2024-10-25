@@ -46,7 +46,8 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 
 ## Screenshots
 
-_Include screenshots of key features such as property listings, search filters, and booking flow._
+[Watch the video](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 
 ## Live Demo
 https://airbnb-opal-five.vercel.app/
