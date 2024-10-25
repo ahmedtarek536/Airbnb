@@ -46,8 +46,12 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 
 ## Screenshots
 
-[Airbnb Clone Demo](https://www.youtube.com/watch?v=IOq2MpQ_bfc)
-[Airbnb Clone Demo](https://www.youtube.com/embed/YOUR_VIDEO_ID)
+# Project Title
+
+Happy shopping! 🛍️
+
+[Slash.flutter.internship.task.mp4](./path/to/your/video.mp4)
+
 
 
 ## Live Demo
