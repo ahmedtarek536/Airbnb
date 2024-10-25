@@ -46,7 +46,7 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
 
 ## Screenshots
 
-[Watch the video](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Live Demo
