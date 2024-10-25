@@ -44,13 +44,10 @@ This project is a full-stack Airbnb clone, replicating core features of the popu
    - **Frontend**: `npm run dev` (in the `Frontend` directory)
    - **Backend**: `npm start` (in the `Backend` directory)
 
-## Screenshots
+## Video
 
-# Project Title
 
-Happy shopping! 🛍️
-
-[Slash.flutter.internship.task.mp4](./path/to/your/video.mp4)
+[Video on Google Drive](https://drive.google.com/file/d/1cmcfc4dsNMjB5S8GPW1qNumPjOb4uAIx/view?usp=sharing)
 
 
 
