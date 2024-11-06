@@ -57,7 +57,7 @@ https://airbnb-opal-five.vercel.app/
 ## Future Improvements
 
 - Implement real-time chat between users and hosts.
-- Add a map view to browse properties by location.
+- Improve Login system
 - Introduce additional payment gateways for global support.
 - Allow users to save favorite properties.
 - Add notifcation to the system
