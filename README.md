@@ -60,4 +60,5 @@ https://airbnb-opal-five.vercel.app/
 - Add a map view to browse properties by location.
 - Introduce additional payment gateways for global support.
 - Allow users to save favorite properties.
+- Add notifcation to the system
 
